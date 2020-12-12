@@ -1,5 +1,16 @@
-{% extends "blog/base.html" %}
-
-{% block content %}
-   <h1>Home</h1>
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}  
+   {% for post in posts %}
+   <div class="contenu content-section">
+    <div class="card">
+        <h5 class="card-header">{{ post.author }} <small class="text-muted pr-5">posted on {{ post.date_posted|date:"F d, Y" }}</small></h5>
+        <div class="card-body">
+          <h6 class="card-title">{{ post.title }}</h6>
+          <p class="card-text">{{ post.content }}</p>
+          <!--<a href="#" class="btn btn-primary bg-info">Go somewhere</a>-->
+        </div>
+    </div>
+  </div>
+  {% endfor %}
 {% endblock %}

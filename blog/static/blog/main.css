@@ -1,0 +1,16 @@
+.annonce{
+	background-color: #F9F9F9;
+	border: 2px solid #F9F9F9;
+    border-radius: 5px;
+}
+
+body{
+	background-color: #E3E3E3;
+}
+
+.contenu{
+	margin-bottom: 6px;
+}
+.push{
+	padding-left: 100px;
+}
